@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GuessNumberGame
 {
@@ -21,19 +17,18 @@ namespace GuessNumberGame
                     Console.WriteLine("Invalid value. Try again.");
                     continue;
                 }
+
+                attempt++;
                 if (userNumber < rnd)
                 {
-                    attempt++;
                     Console.WriteLine("I’m guessing a bigger number. Try again.");
                 }
                 else if (userNumber > rnd)
                 {
-                    attempt++;
                     Console.WriteLine("I’m guessing a smaller number. Try again.");
                 }
                 else
                 {
-                    attempt++;
                     Console.WriteLine($"Congratulations! You guessed my number in {attempt} attempts.");
                     return;
                 }
